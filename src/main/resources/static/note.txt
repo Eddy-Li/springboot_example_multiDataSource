@@ -1,0 +1,5 @@
+访问static目录下的文件方式如下，不需要/static：
+    http://localhost:8080/mingren.jpg
+    http://localhost:8080/index.html
+访问static目录下的目录下的文件如下：
+    http://localhost:8080/images/mingren.jpg

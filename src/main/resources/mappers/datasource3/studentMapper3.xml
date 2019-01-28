@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zykj.springboot_example.datasource3.dao.StudentDao3">
+
+    <resultMap id="studentMap" type="com.zykj.springboot_example.model.Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="age" column="age"/>
+        <result property="classAndGrade" column="class"/>
+        <result property="studentNumber" column="student_number"/>
+        <result property="version" column="version"/>
+    </resultMap>
+
+    <select id="getStudentByStudentNumber" parameterType="String" resultMap="studentMap">
+        SELECT id,name,sex,age,class,student_number,version FROM tab_student WHERE student_number=#{studentNumber}
+    </select>
+
+
+</mapper>
